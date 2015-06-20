@@ -1,22 +1,4 @@
----
-title: "README"
-author: "Steve Byrne"
-date: "June 20, 2015"
-output: html_document
----
+= Tidy Data Analysis Course Project
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The data for this project can be downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.  Set the current directory to the directory of this project, and unzip the file.  Or, alternately, unzip it somewhere else convienient, and adjust the DATA.ROOT.DIRECTORY variable in run_analysis.R to specify where it was unzipped.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r}
-summary(cars)
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

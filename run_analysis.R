@@ -3,10 +3,17 @@
 
 DATA.ROOT.DIRECTORY = "UCI HAR Dataset"
 
-load.activity.labels <- function() {
-  activity.labels.filename <- file.path(DATA.ROOT.DIRECTORY, "activity_labels.txt")
-  activity.labels <- read.table(activity.labels.filename, sep=" ", stringsAsFactors = FALSE)
-  activity.labels[,2]
+load.activity.names <- function() {
+  activity.names.filename <- file.path(DATA.ROOT.DIRECTORY, "activity_labels.txt")
+  activity.names <- read.table(activity.names.filename, sep=" ", stringsAsFactors = FALSE)
+  activity.names[,2]
 }
 
-print(load.activity.labels())
+load.data.column.names <- function() {
+  data.column.names.filename = file.path(DATA.ROOT.DIRECTORY, "features.txt")
+  column.names <- read.table(data.column.names.filename, sep=" ", stringsAsFactors = FALSE)
+  column.names[,2]
+}
+
+print(load.activity.names())
+print(load.data.column.names())
