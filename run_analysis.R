@@ -98,25 +98,30 @@ analyze.motion.data <- function() {
   add.activity.names.and.subjects(means.and.standard.deviations)
 }
 
-produce.tidy.averages.by.activity.dataset <- function() {
-  groups.by.activity = split(motion.data, motion.data$Activity)
+produce.tidy.averages.by.activity.dataset <- function(data) {
+  groups.by.activity = split(data, data$Activity)
   averages <- sapply(groups.by.activity, function(x) { colMeans(subset(x, select=-c(Activity, Subject)))})
-  #write.table(averages, "tidy-motion-data-by-activity.txt")
-  write(averages, "testdata.txt")
+  write.table(averages, "tidy-motion-data-by-activity.txt")
+  #write(averages, "testdata.txt")
+  averages
 }
 
-produce.tidy.averages.by.subject.dataset <- function() {
-  groups.by.activity = split(motion.data, motion.data$Subject)
+produce.tidy.averages.by.subject.dataset <- function(data) {
+  groups.by.activity = split(data, data$Subject)
   averages <- sapply(groups.by.activity, function(x) { colMeans(subset(x, select=-c(Activity, Subject)))})
   write.table(averages, "tidy-motion-data-by-subject.txt")
   averages
 }
 
-produce.tidy.datasets <- function() {
-  produce.tidy.averages.by.activity.dataset()
-  produce.tidy.averages.by.subject.dataset()
+produce.tidy.dataset <- function() {
+ # data <- analyze.motion.data()
+  data <- motion.data
+  tidy.dataset = aggregate(data[,-c(1,2)], list(Activity=data$Activity, Subject=data$Subject), mean)
+  write.table(tidy.dataset, "tidy-inertial-data.txt")
+  #produce.tidy.averages.by.activity.dataset(data)
+  # produce.tidy.averages.by.subject.dataset(data)
 }
-#print(class(load.activity.names()))
+
 #print(load.data.column.names())
 #data <- load.measurement.data("test", nrows = 10)
 #print(class(data))
@@ -130,4 +135,5 @@ produce.tidy.datasets <- function() {
 #print(head(add.activity.names(reduced), 500)[,c('Activity', 'Subject')])
 #print(head(analyze.motion.data(), 500)[,c('Activity', 'Subject')])
 
-print(head(produce.tidy.averages.by.activity.dataset(),10))
+#print(head(produce.tidy.averages.by.activity.dataset(),10))
+print(head(produce.tidy.dataset(),10))
