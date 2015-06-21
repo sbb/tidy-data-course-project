@@ -33,54 +33,53 @@ tBodyAccJerk.mean...Z| tBodyAccJerk-mean()-Z | mean of the body acceleration "je
 tBodyAccJerk.std...X| tBodyAccJerk-std()-X | mean of the standard deviation of the body acceleration "jerk" in the X direction
 tBodyAccJerk.std...Y| tBodyAccJerk-std()-Y | mean of the standard deviation of the body acceleration "jerk" in the X direction
 tBodyAccJerk.std...Z| tBodyAccJerk-std()-Z | mean of the standard deviation of the body acceleration "jerk" in the X direction
-tBodyGyro.mean...X| tBodyGyro-mean()-X |
-tBodyGyro.mean...Y| tBodyGyro-mean()-Y |
-tBodyGyro.mean...Z| tBodyGyro-mean()-Z |
-tBodyGyro.std...X| tBodyGyro-std()-X |
-tBodyGyro.std...Y| tBodyGyro-std()-Y |
-tBodyGyro.std...Z| tBodyGyro-std()-Z |
-tBodyGyroJerk.mean...X| tBodyGyroJerk-mean()-X |
-tBodyGyroJerk.mean...Y| tBodyGyroJerk-mean()-Y |
-tBodyGyroJerk.mean...Z| tBodyGyroJerk-mean()-Z |
-tBodyGyroJerk.std...X| tBodyGyroJerk-std()-X |
-tBodyGyroJerk.std...Y| tBodyGyroJerk-std()-Y |
-tBodyGyroJerk.std...Z| tBodyGyroJerk-std()-Z |
-tBodyAccMag.mean..| tBodyAccMag-mean() |
-tBodyAccMag.std..| tBodyAccMag-std() |
-tGravityAccMag.mean..| tGravityAccMag-mean() |
-tGravityAccMag.std..| tGravityAccMag-std() |
-tBodyAccJerkMag.mean..| tBodyAccJerkMag-mean() |
-tBodyAccJerkMag.std..| tBodyAccJerkMag-std() |
-tBodyGyroMag.mean..| tBodyGyroMag-mean() |
-tBodyGyroMag.std..| tBodyGyroMag-std() |
-tBodyGyroJerkMag.mean..| tBodyGyroJerkMag-std() |
-tBodyGyroJerkMag.std..| tBodyGyroJerkMag-mad() |
-fBodyAcc.mean...X| fBodyAcc-mean()-X |
-fBodyAcc.mean...Y| fBodyAcc-mean()-Y |
-fBodyAcc.mean...Z| fBodyAcc-mean()-Z |
-fBodyAcc.std...X| fBodyAcc-std()-X |
-fBodyAcc.std...Y| fBodyAcc-std()-Y |
-fBodyAcc.std...Z| fBodyAcc-std()-Z |
-fBodyAccJerk.mean...X| fBodyAccJerk-mean()-X |
-fBodyAccJerk.mean...Y| fBodyAccJerk-mean()-Y |
-fBodyAccJerk.mean...Z| fBodyAccJerk-mean()-Z |
-fBodyAccJerk.std...X| fBodyAccJerk-std()-X |
-fBodyAccJerk.std...Y| fBodyAccJerk-std()-Y |
-fBodyAccJerk.std...Z| fBodyAccJerk-std()-Z |
-fBodyGyro.mean...X| fBodyGyro-mean()-X |
-fBodyGyro.mean...Y| fBodyGyro-mean()-Y |
-fBodyGyro.mean...Z | fBodyGyro-mean()-Z |
-fBodyGyro.std...X | fBodyGyro-std()-X |
-fBodyGyro.std...Y | fBodyGyro-std()-Y |
-fBodyGyro.std...Z | fBodyGyro-std()-Z |
-fBodyAccMag.mean.. | fBodyAccMag-mean() |
-fBodyAccMag.std..| fBodyAccMag-std() |
-fBodyBodyAccJerkMag.mean..| fBodyBodyAccJerkMag-mean() |
-fBodyBodyAccJerkMag.std..| fBodyBodyAccJerkMag-std() |
-fBodyBodyGyroMag.mean..| fBodyBodyGyroMag-mean() |
-fBodyBodyGyroMag.std..| fBodyBodyGyroMag-std() |
-fBodyBodyGyroJerkMag.mean..| fBodyBodyGyroJerkMag-std() |
-fBodyBodyGyroJerkMag.std..| fBodyBodyGyroJerkMag-mad() |
+tBodyGyro.mean...X| tBodyGyro-mean()-X | mean of the body component of the X gyroscope signal
+tBodyGyro.mean...Y| tBodyGyro-mean()-Y | mean of the body component of the Y gyroscope signal
+tBodyGyro.mean...Z| tBodyGyro-mean()-Z | mean of the body component of the Z gyroscope signal
+tBodyGyro.std...X| tBodyGyro-std()-X | mean the standard deviation of the body component of the X gyroscope signal
+tBodyGyro.std...Y| tBodyGyro-std()-Y | mean the standard deviation of the body component of the Y gyroscope signal
+tBodyGyro.std...Z| tBodyGyro-std()-Z | mean the standard deviation of the body component of the Z  gyroscope signal
+tBodyGyroJerk.mean...X| tBodyGyroJerk-mean()-X | mean of the body component of the X gyroscope "jerk" signal
+tBodyGyroJerk.mean...Y| tBodyGyroJerk-mean()-Y | mean of the body component of the Y gyroscope "jerk" signal
+tBodyGyroJerk.mean...Z| tBodyGyroJerk-mean()-Z | mean of the body component of the Z gyroscope "jerk" signal
+tBodyGyroJerk.std...X| tBodyGyroJerk-std()-X | mean of the standard deviation of the  body component of the X gyroscope "jerk" signal
+tBodyGyroJerk.std...Y| tBodyGyroJerk-std()-Y | mean of the standard deviation of the  body component of the Y gyroscope "jerk" signal
+tBodyGyroJerk.std...Z| tBodyGyroJerk-std()-Z | mean of the standard deviation of the  body component of the Z gyroscope "jerk" signal
+tBodyAccMag.mean..| tBodyAccMag-mean() | mean of the magnitude of the Euclidean norm of the body acceleration signals
+tBodyAccMag.std..| tBodyAccMag-std() | mean of the standard deviation of the magnitude of the Euclidean norm of the body acceleration signals
+tGravityAccMag.mean..| tGravityAccMag-mean() | mean of the magnitude of the Euclidean norm of acceleration due to gravity signals
+tGravityAccMag.std..| tGravityAccMag-std() | mean of the standard deviation of the magnitude of the Euclidean norm of acceleration due to gravity signals
+tBodyAccJerkMag.mean..| tBodyAccJerkMag-mean() | mean of the magnitude of the Euclidean norm of the body acceleration "jerk" signals
+tBodyAccJerkMag.std..| tBodyAccJerkMag-std() | mean of the standard deviation of the magnitude of the Euclidean norm of the body acceleration "jerk" signals
+tBodyGyroMag.mean..| tBodyGyroMag-mean() | mean of the magnitude of the Euclidean norm of the body acceleration component of the gyroscope signals
+tBodyGyroMag.std..| tBodyGyroMag-std() | mean of the standard deviation of the magnitude of the Euclidean norm of the body acceleration component of the gyroscope signals
+tBodyGyroJerkMag.mean..| tBodyGyroJerkMag-std() | mean of the magnitude of the Euclidean norm of the body acceleration "jerk" component of the gyroscope signals
+tBodyGyroJerkMag.std..| tBodyGyroJerkMag-mad() | mean of the standard deviation of the magnitude of the Euclidean norm of the body acceleration "jerk" component of the gyroscope signals
+fBodyAcc.mean...X| fBodyAcc-mean()-X | mean of the body acceleration in the X direction in the frequency domain
+fBodyAcc.mean...Y| fBodyAcc-mean()-Y | mean of the body acceleration in the Y direction in the frequency domain
+fBodyAcc.mean...Z| fBodyAcc-mean()-Z | mean of the body acceleration in the Z direction in the frequency domain
+fBodyAcc.std...X| fBodyAcc-std()-X | mean of the standard deviation of the body acceleration in the X direction in the frequency domain
+fBodyAcc.std...Y| fBodyAcc-std()-Y | mean of the standard deviation of the body acceleration in the Y direction in the frequency domain
+fBodyAcc.std...Z| fBodyAcc-std()-Z | mean of the standard deviation of the body acceleration in the Z direction in the frequency domain
+fBodyAccJerk.mean...X| fBodyAccJerk-mean()-X | mean of the body acceleration "jerk" in the X direction in the frequency domain
+fBodyAccJerk.mean...Y| fBodyAccJerk-mean()-Y | mean of the body acceleration "jerk" in the Y direction in the frequency domain
+fBodyAccJerk.mean...Z| fBodyAccJerk-mean()-Z | mean of the body acceleration "jerk" in the Z direction in the frequency domain
+fBodyAccJerk.std...X| fBodyAccJerk-std()-X | mean of the standard deviation of the body acceleration "jerk" in the X direction in the frequency domain
+fBodyAccJerk.std...Y| fBodyAccJerk-std()-Y | mean of the standard deviation of the body acceleration "jerk" in the Y direction in the frequency domain
+fBodyAccJerk.std...Z| fBodyAccJerk-std()-Z | mean of the standard deviation of the body acceleration "jerk" in the Z direction in the frequency domain
+fBodyGyro.mean...X| fBodyGyro-mean()-X | mean of the body component of the X gyroscope signal in the frequency domain
+fBodyGyro.mean...Y| fBodyGyro-mean()-Y | mean of the body component of the Y gyroscope signal in the frequency domain
+fBodyGyro.mean...Z | fBodyGyro-mean()-Z | mean of the body component of the Z gyroscope signal in the frequency domain
+fBodyGyro.std...X | fBodyGyro-std()-X | mean of the standard deviation of the body component of the X gyroscope signal in the frequency domain
+fBodyGyro.std...Y | fBodyGyro-std()-Y | mean of the standard deviation of the body component of the Y gyroscope signal in the frequency domain
+fBodyGyro.std...Z | fBodyGyro-std()-Z | mean of the standard deviation of the body component of the Z gyroscope signal in the frequency domain
+fBodyAccMag.mean.. | fBodyAccMag-mean() | mean of the magnitude of the Euclidean norm of the body acceleration signals in the frequency domain
+fBodyAccMag.std..| fBodyAccMag-std() | mean of the standard deviation of the magnitude of the Euclidean norm of the body acceleration signals in the frequncy domain 
+fBodyBodyAccJerkMag.mean..| fBodyBodyAccJerkMag-mean() | mean of the magnitude of the Euclidean norm of the body acceleration "jerk" signals in the frequency domain 
+fBodyBodyAccJerkMag.std..| fBodyBodyAccJerkMag-std() | mean of the standard deviation of the magnitude of the Euclidean norm of the body acceleration "jerk" signals in the frequency domain
+fBodyBodyGyroMag.mean..| fBodyBodyGyroMag-mean() | mean of the magnitude of the Euclidean norm of the body acceleration component of the gyroscope signals in the frequency domain 
+fBodyBodyGyroMag.std..| fBodyBodyGyroMag-std() | mean of the standard deviation of the magnitude of the Euclidean norm of the body acceleration component of the gyroscope signals
+fBodyBodyGyroJerkMag.mean..| fBodyBodyGyroJerkMag-std() | mean of the magnitude of the Euclidean norm of the body acceleration "jerk" signals in the frequency domain
 
 ### Summary choices that were made
 
