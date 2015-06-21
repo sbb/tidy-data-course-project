@@ -1,7 +1,8 @@
 # Run an analysis of the inertial measurement data.
 # Combines the data from the training and test sets
 
-DATA.ROOT.DIRECTORY = "UCI HAR Dataset"
+# Change this variable after loading if you your original data set is not located in a direct subdirectory called "UCI HAR Dataset"
+DATA.ROOT.DIRECTORY <- "UCI HAR Dataset"
 
 # Loads the names of the various activities from the activity_labels.txt file.  Returns a character vector containing
 # just the names
@@ -85,6 +86,7 @@ select.means.and.standard.deviations <- function(observation.data) {
   observation.data[,grep("-(mean|std)\\(\\)", load.data.column.names())]
 }
 
+# Sticks prepends the activity labels and subjects for each row of the data and returns the result.
 add.activity.names.and.subjects <- function(observation.data) {
   activity.names <- load.activity.names()
   activity.records <- load.combined.values(load.activity.records)
@@ -92,48 +94,21 @@ add.activity.names.and.subjects <- function(observation.data) {
   cbind("Activity" = activity.names[activity.records], "Subject" = subjects, observation.data)
 }
 
+# The main analysis function.  Loads the measurement data, selects the subset that contains just the means and
+# standard deviations, and adds and returns columns for the associated activities and subjects.
+# The result correponds with step 4 in the assignment.
 analyze.motion.data <- function() {
   data <- load.combined.values(load.measurement.data)
   means.and.standard.deviations <- select.means.and.standard.deviations(data)
   add.activity.names.and.subjects(means.and.standard.deviations)
 }
 
-produce.tidy.averages.by.activity.dataset <- function(data) {
-  groups.by.activity = split(data, data$Activity)
-  averages <- sapply(groups.by.activity, function(x) { colMeans(subset(x, select=-c(Activity, Subject)))})
-  write.table(averages, "tidy-motion-data-by-activity.txt")
-  #write(averages, "testdata.txt")
-  averages
-}
-
-produce.tidy.averages.by.subject.dataset <- function(data) {
-  groups.by.activity = split(data, data$Subject)
-  averages <- sapply(groups.by.activity, function(x) { colMeans(subset(x, select=-c(Activity, Subject)))})
-  write.table(averages, "tidy-motion-data-by-subject.txt")
-  averages
-}
-
+# The main function.  Loads and analyzes the data, creates the means by activity and subject, and writes the result
+# to "tidy-intertial-data-means.txt
 produce.tidy.dataset <- function() {
- # data <- analyze.motion.data()
-  data <- motion.data
+  data <- analyze.motion.data()
   tidy.dataset = aggregate(data[,-c(1,2)], list(Activity=data$Activity, Subject=data$Subject), mean)
-  write.table(tidy.dataset, "tidy-inertial-data.txt")
-  #produce.tidy.averages.by.activity.dataset(data)
-  # produce.tidy.averages.by.subject.dataset(data)
+  write.table(tidy.dataset, "tidy-inertial-data-means.txt")
 }
 
-#print(load.data.column.names())
-#data <- load.measurement.data("test", nrows = 10)
-#print(class(data))
-#print(load.activity.records("test"))
-#print(load.subject.numbers("test"))
-#data <- load.combined.values(load.measurement.data)
-#print(load.combined.values(load.measurement.data, nrow=3))
-
-#reduced <- select.means.and.standard.deviations(data)
-#motion.data <- analyze.motion.data()
-#print(head(add.activity.names(reduced), 500)[,c('Activity', 'Subject')])
-#print(head(analyze.motion.data(), 500)[,c('Activity', 'Subject')])
-
-#print(head(produce.tidy.averages.by.activity.dataset(),10))
 print(head(produce.tidy.dataset(),10))
