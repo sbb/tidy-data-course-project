@@ -5,3 +5,6 @@
 UCI HAR Dataset/
 testdata.txt
 dumpdata.R
+Codebook.html
+simple_column_label_map.txt
+README.html

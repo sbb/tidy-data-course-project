@@ -37,7 +37,7 @@ load.measurement.data <- function (data.type,...) {
 # ...: additional parameters to be passed to the  read.table function as additional parameters; this can be used 
 #      to specify, for example, a limit on the number of rows to laod.
 #
-# Returns a vector of integers
+# Returns a vector of integers which are indices of activities that correspond with the values in the activity labels
 load.activity.records <- function(data.type, ...) {
   activity.indices.filename = file.path(DATA.ROOT.DIRECTORY, data.type, paste0("y_", data.type, ".txt"))
   activity.indices <- read.table(activity.indices.filename, sep=" ", stringsAsFactors = FALSE, ...)
@@ -110,6 +110,11 @@ produce.tidy.averages.by.subject.dataset <- function() {
   averages <- sapply(groups.by.activity, function(x) { colMeans(subset(x, select=-c(Activity, Subject)))})
   write.table(averages, "tidy-motion-data-by-subject.txt")
   averages
+}
+
+produce.tidy.datasets <- function() {
+  produce.tidy.averages.by.activity.dataset()
+  produce.tidy.averages.by.subject.dataset()
 }
 #print(class(load.activity.names()))
 #print(load.data.column.names())

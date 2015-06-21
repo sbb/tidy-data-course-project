@@ -12,7 +12,23 @@ The specification called for the "mean" and "standard deviation" of each measure
 
 ### Running the analysis
 
-To run the analysis, load the "run_analysis.R" file into R.  Be sure the working directory is set to the directory that contains the run_analysis.R file and (if you are sticking with the defaults), the unzipped data set.
+The tidy-motion-data-by-*.txt files contain the two datasets resulting from running the analysis, so it is not necessary to run the analysis again.  However, if desired it can be done using the following instructions:
+
+To run the analysis, load the "run_analysis.R" file into R.  Be sure the working directory is set to the directory that contains the run_analysis.R file and (if you are sticking with the defaults), the unzipped data set (see below for an alternative).
 
 Invoke the XXX function.
 
+
+### Resulting data set
+
+The dataset includes the following files:
+
+* README.md: you're reading this one now
+
+* Codebook.md: detailed description of the data in the data set
+
+* run_analysis.R: the actual R script that processes the input inertial measurement data and produces the dataset.
+
+* tidy-motion-data-by-subject.txt: This contains the averages of the means and standard deviations for each subject (participant) in the study.  It can be read by read.table("tidy-motion-data-by-subject.txt", header = TRUE).  The columns are the subject identification numbers, and the rows are the means and standard deviations feature variables.
+
+* tidy-motion-data-by-activity: This file contains the averages of the means and standard deviations for each activity type (standing, walking, etc.).  It can be read by read.table("tidy-motion-data-by-activity.txt", header = TRUE).  The colums are the various activity types, and the rows are the means and standard deviations feature variables.
