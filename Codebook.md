@@ -1,5 +1,5 @@
 
-# Codebook for the Tidy Data course project
+# Code book for the Getting and Cleaning Data course project
 
 This file describes the data produced by running the run_analysis.R script on the source data.  The original source data is based on accelerator measurements of volunteers performing various physical activities while carrying (somewhere on their person) a Samsung Galaxy S II phone.  
 
@@ -7,79 +7,81 @@ The actual original data and description of its original feature variables can b
 
 > https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The data produced by the analysis
 
 ### Code book
 The variables in the data set are average values, groups by activity and subject, for each mean and standard deviation variable in the original data set.
 
 Variable | Original dataset variable | Description
 -------- | ------------------------- | -----------
-var | tBodyAcc-mean()-X | mean of the ...
-| tBodyAcc-mean()-Y |
-| tBodyAcc-mean()-Z |
-| tBodyAcc-std()-X |
-| tBodyAcc-std()-Y |
-| tBodyAcc-std()-Z |
-| tGravityAcc-mean()-X |
-| tGravityAcc-mean()-Y |
-| tGravityAcc-mean()-Z |
-| tGravityAcc-std()-X |
-| tGravityAcc-std()-Y |
-| tGravityAcc-std()-Z |
-| tBodyAccJerk-mean()-X |
-| tBodyAccJerk-mean()-Y |
-| tBodyAccJerk-mean()-Z |
-| tBodyAccJerk-std()-X |
-| tBodyAccJerk-std()-Y |
-| tBodyAccJerk-std()-Z |
-| tBodyGyro-mean()-X |
-| tBodyGyro-mean()-Y |
-| tBodyGyro-mean()-Z |
-| tBodyGyro-std()-X |
-| tBodyGyro-std()-Y |
-| tBodyGyro-std()-Z |
-| tBodyGyroJerk-mean()-X |
-| tBodyGyroJerk-mean()-Y |
-| tBodyGyroJerk-mean()-Z |
-| tBodyGyroJerk-std()-X |
-| tBodyGyroJerk-std()-Y |
-| tBodyGyroJerk-std()-Z |
-| tBodyAccMag-mean() |
-| tBodyAccMag-std() |
-| tGravityAccMag-mean() |
-| tGravityAccMag-std() |
-| tBodyAccJerkMag-mean() |
-| tBodyAccJerkMag-std() |
-| tBodyGyroMag-mean() |
-| tBodyGyroMag-std() |
-| tBodyGyroJerkMag-std() |
-| tBodyGyroJerkMag-mad() |
-| fBodyAcc-mean()-X |
-| fBodyAcc-mean()-Y |
-| fBodyAcc-mean()-Z |
-| fBodyAcc-std()-X |
-| fBodyAcc-std()-Y |
-| fBodyAcc-std()-Z |
-| fBodyAccJerk-mean()-X |
-| fBodyAccJerk-mean()-Y |
-| fBodyAccJerk-mean()-Z |
-| fBodyAccJerk-std()-X |
-| fBodyAccJerk-std()-Y |
-| fBodyAccJerk-std()-Z |
-| fBodyGyro-mean()-X |
-| fBodyGyro-mean()-Y |
-| fBodyGyro-mean()-Z |
-| fBodyGyro-std()-X |
-| fBodyGyro-std()-Y |
-| fBodyGyro-std()-Z |
-| fBodyAccMag-mean() |
-| fBodyAccMag-std() |
-| fBodyBodyAccJerkMag-mean() |
-| fBodyBodyAccJerkMag-std() |
-| fBodyBodyGyroMag-mean() |
-| fBodyBodyGyroMag-std() |
-| fBodyBodyGyroJerkMag-std() |
-| fBodyBodyGyroJerkMag-mad() |
+
+Activity | y_{train,test}.txt  and activity_labels.txt | The human readable label for each activity
+Subject | subject_{train,test}.txt | Gives the subject index for each subject participating in the study
+tBodyAcc.mean...X| tBodyAcc-mean()-X | mean of the ...
+tBodyAcc.mean...Y| tBodyAcc-mean()-Y |
+tBodyAcc.mean...Z| tBodyAcc-mean()-Z |
+tBodyAcc.std...X| tBodyAcc-std()-X |
+tBodyAcc.std...Y| tBodyAcc-std()-Y |
+tBodyAcc.std...Z| tBodyAcc-std()-Z |
+tGravityAcc.mean...X| tGravityAcc-mean()-X |
+tGravityAcc.mean...Y| tGravityAcc-mean()-Y |
+tGravityAcc.mean...Z| tGravityAcc-mean()-Z |
+tGravityAcc.std...X| tGravityAcc-std()-X |
+tGravityAcc.std...Y| tGravityAcc-std()-Y |
+tGravityAcc.std...Z| tGravityAcc-std()-Z |
+tBodyAccJerk.mean...X| tBodyAccJerk-mean()-X |
+tBodyAccJerk.mean...Y| tBodyAccJerk-mean()-Y |
+tBodyAccJerk.mean...Z| tBodyAccJerk-mean()-Z |
+tBodyAccJerk.std...X| tBodyAccJerk-std()-X |
+tBodyAccJerk.std...Y| tBodyAccJerk-std()-Y |
+tBodyAccJerk.std...Z| tBodyAccJerk-std()-Z |
+tBodyGyro.mean...X| tBodyGyro-mean()-X |
+tBodyGyro.mean...Y| tBodyGyro-mean()-Y |
+tBodyGyro.mean...Z| tBodyGyro-mean()-Z |
+tBodyGyro.std...X| tBodyGyro-std()-X |
+tBodyGyro.std...Y| tBodyGyro-std()-Y |
+tBodyGyro.std...Z| tBodyGyro-std()-Z |
+tBodyGyroJerk.mean...X| tBodyGyroJerk-mean()-X |
+tBodyGyroJerk.mean...Y| tBodyGyroJerk-mean()-Y |
+tBodyGyroJerk.mean...Z| tBodyGyroJerk-mean()-Z |
+tBodyGyroJerk.std...X| tBodyGyroJerk-std()-X |
+tBodyGyroJerk.std...Y| tBodyGyroJerk-std()-Y |
+tBodyGyroJerk.std...Z| tBodyGyroJerk-std()-Z |
+tBodyAccMag.mean..| tBodyAccMag-mean() |
+tBodyAccMag.std..| tBodyAccMag-std() |
+tGravityAccMag.mean..| tGravityAccMag-mean() |
+tGravityAccMag.std..| tGravityAccMag-std() |
+tBodyAccJerkMag.mean..| tBodyAccJerkMag-mean() |
+tBodyAccJerkMag.std..| tBodyAccJerkMag-std() |
+tBodyGyroMag.mean..| tBodyGyroMag-mean() |
+tBodyGyroMag.std..| tBodyGyroMag-std() |
+tBodyGyroJerkMag.mean..| tBodyGyroJerkMag-std() |
+tBodyGyroJerkMag.std..| tBodyGyroJerkMag-mad() |
+fBodyAcc.mean...X| fBodyAcc-mean()-X |
+fBodyAcc.mean...Y| fBodyAcc-mean()-Y |
+fBodyAcc.mean...Z| fBodyAcc-mean()-Z |
+fBodyAcc.std...X| fBodyAcc-std()-X |
+fBodyAcc.std...Y| fBodyAcc-std()-Y |
+fBodyAcc.std...Z| fBodyAcc-std()-Z |
+fBodyAccJerk.mean...X| fBodyAccJerk-mean()-X |
+fBodyAccJerk.mean...Y| fBodyAccJerk-mean()-Y |
+fBodyAccJerk.mean...Z| fBodyAccJerk-mean()-Z |
+fBodyAccJerk.std...X| fBodyAccJerk-std()-X |
+fBodyAccJerk.std...Y| fBodyAccJerk-std()-Y |
+fBodyAccJerk.std...Z| fBodyAccJerk-std()-Z |
+fBodyGyro.mean...X| fBodyGyro-mean()-X |
+fBodyGyro.mean...Y| fBodyGyro-mean()-Y |
+fBodyGyro.mean...Z | fBodyGyro-mean()-Z |
+fBodyGyro.std...X | fBodyGyro-std()-X |
+fBodyGyro.std...Y | fBodyGyro-std()-Y |
+fBodyGyro.std...Z | fBodyGyro-std()-Z |
+fBodyAccMag.mean.. | fBodyAccMag-mean() |
+fBodyAccMag.std..| fBodyAccMag-std() |
+fBodyBodyAccJerkMag.mean..| fBodyBodyAccJerkMag-mean() |
+fBodyBodyAccJerkMag.std..| fBodyBodyAccJerkMag-std() |
+fBodyBodyGyroMag.mean..| fBodyBodyGyroMag-mean() |
+fBodyBodyGyroMag.std..| fBodyBodyGyroMag-std() |
+fBodyBodyGyroJerkMag.mean..| fBodyBodyGyroJerkMag-std() |
+fBodyBodyGyroJerkMag.std..| fBodyBodyGyroJerkMag-mad() |
 
 ### Summary choices that were made
 
@@ -87,5 +89,5 @@ The project specification called for collecting the "means" and "standard deviat
 
 ### Study design
 
-For this data analysis, there wasn't much in the way of study design.  The original data were provided in a series of files 
+For this data analysis, there wasn't much in the way of study design.  The original data were provided in a collection of files, separated into training and test groups.  The analysis performed by this project involved combining the data from the corresponding files in the test and training groups, selecting only the means and standard devation columns, attaching the corresponding data from the activity files and fro the subject files, and then computing the mean of each column grouped by the activity & subject.
 
