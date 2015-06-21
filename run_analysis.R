@@ -52,12 +52,31 @@ select.means.and.standard.deviations <- function(observation.data) {
   observation.data[,grep("-(mean|std)", load.data.column.names())]
 }
 
-add.activity.names <- function(observation.data) {
+add.activity.names.and.subjects <- function(observation.data) {
   activity.names <- load.activity.names()
   activity.records <- load.combined.values(load.activity.records)
-  cbind("Activity" = activity.names[activity.records], observation.data)
+  subjects <- load.combined.values(load.subject.numbers)
+  cbind("Activity" = activity.names[activity.records], "Subject" = subjects, observation.data)
 }
 
+analyze.motion.data <- function() {
+  data <- load.combined.values(load.measurement.data)
+  means.and.standard.deviations <- select.means.and.standard.deviations(data)
+  add.activity.names.and.subjects(means.and.standard.deviations)
+}
+
+produce.tidy.averages.by.activity.dataset <- function() {
+  groups.by.activity = split(motion.data, motion.data$Activity)
+  averages <- sapply(groups.by.activity, function(x) { colMeans(subset(x, select=-c(Activity, Subject)))})
+  write.table(averages, "tidy-motion-data-by-activity.txt")
+}
+
+produce.tidy.averages.by.subject.dataset <- function() {
+  groups.by.activity = split(motion.data, motion.data$Subject)
+  averages <- sapply(groups.by.activity, function(x) { colMeans(subset(x, select=-c(Activity, Subject)))})
+  write.table(averages, "tidy-motion-data-by-subject.txt")
+  averages
+}
 #print(class(load.activity.names()))
 #print(load.data.column.names())
 #data <- load.measurement.data("test", nrows = 10)
@@ -68,5 +87,8 @@ add.activity.names <- function(observation.data) {
 #print(load.combined.values(load.measurement.data, nrow=3))
 
 #reduced <- select.means.and.standard.deviations(data)
+#motion.data <- analyze.motion.data()
+#print(head(add.activity.names(reduced), 500)[,c('Activity', 'Subject')])
+#print(head(analyze.motion.data(), 500)[,c('Activity', 'Subject')])
 
-print(head(add.activity.names(reduced), 100)$Activity)
+print(head(produce.tidy.averages.by.activity.dataset(),10))

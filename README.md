@@ -6,6 +6,10 @@ The content in the zip file contains information about the origin of the data, a
 
 The data are separated into training and test data sets.  
 
+### Decisions
+
+The specification called for the "mean" and "standard deviation" of each measurement.  I used a strict interpretation of this: "mean" is limited to those features that have "-mean()" in their names in the original data set, and "standard deviation" is limited to those features that have "-std()" in their names.
+
 ### Running the analysis
 
 To run the analysis, load the "run_analysis.R" file into R.  Be sure the working directory is set to the directory that contains the run_analysis.R file and (if you are sticking with the defaults), the unzipped data set.
