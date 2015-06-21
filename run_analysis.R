@@ -111,4 +111,3 @@ produce.tidy.dataset <- function() {
   write.table(tidy.dataset, "tidy-inertial-data-means.txt")
 }
 
-print(head(produce.tidy.dataset(),10))
