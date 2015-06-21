@@ -13,27 +13,26 @@ The variables in the data set are average values, groups by activity and subject
 
 Variable | Original dataset variable | Description
 -------- | ------------------------- | -----------
-
 Activity | y_{train,test}.txt  and activity_labels.txt | The human readable label for each activity
 Subject | subject_{train,test}.txt | Gives the subject index for each subject participating in the study
-tBodyAcc.mean...X| tBodyAcc-mean()-X | mean of the ...
-tBodyAcc.mean...Y| tBodyAcc-mean()-Y |
-tBodyAcc.mean...Z| tBodyAcc-mean()-Z |
-tBodyAcc.std...X| tBodyAcc-std()-X |
-tBodyAcc.std...Y| tBodyAcc-std()-Y |
-tBodyAcc.std...Z| tBodyAcc-std()-Z |
-tGravityAcc.mean...X| tGravityAcc-mean()-X |
-tGravityAcc.mean...Y| tGravityAcc-mean()-Y |
-tGravityAcc.mean...Z| tGravityAcc-mean()-Z |
-tGravityAcc.std...X| tGravityAcc-std()-X |
-tGravityAcc.std...Y| tGravityAcc-std()-Y |
-tGravityAcc.std...Z| tGravityAcc-std()-Z |
-tBodyAccJerk.mean...X| tBodyAccJerk-mean()-X |
-tBodyAccJerk.mean...Y| tBodyAccJerk-mean()-Y |
-tBodyAccJerk.mean...Z| tBodyAccJerk-mean()-Z |
-tBodyAccJerk.std...X| tBodyAccJerk-std()-X |
-tBodyAccJerk.std...Y| tBodyAccJerk-std()-Y |
-tBodyAccJerk.std...Z| tBodyAccJerk-std()-Z |
+tBodyAcc.mean...X| tBodyAcc-mean()-X | mean of the body acceleration in the X direction
+tBodyAcc.mean...Y| tBodyAcc-mean()-Y | mean of the body acceleration in the Y direction
+tBodyAcc.mean...Z| tBodyAcc-mean()-Z | mean of the body acceleration in the Z direction
+tBodyAcc.std...X| tBodyAcc-std()-X | mean of the standard deviation of the body acceleration in the X direction
+tBodyAcc.std...Y| tBodyAcc-std()-Y | mean of the standard deviation of the body acceleration in the Y direction
+tBodyAcc.std...Z| tBodyAcc-std()-Z | mean of the standard deviation of the body acceleration in the Z direction
+tGravityAcc.mean...X| tGravityAcc-mean()-X | mean of the acceleration due to gravity in the X direction
+tGravityAcc.mean...Y| tGravityAcc-mean()-Y | mean of the acceleration due to gravity in the Y direction
+tGravityAcc.mean...Z| tGravityAcc-mean()-Z | mean of the acceleration due to gravity in the Z direction
+tGravityAcc.std...X| tGravityAcc-std()-X | mean of the standard deviation due to gravity in the X direction
+tGravityAcc.std...Y| tGravityAcc-std()-Y | mean of the standard deviation due to gravity in the Y direction
+tGravityAcc.std...Z| tGravityAcc-std()-Z | mean of the standard deviation due to gravity in the Z direction
+tBodyAccJerk.mean...X| tBodyAccJerk-mean()-X | mean of the body acceleration "jerk" in the X direction
+tBodyAccJerk.mean...Y| tBodyAccJerk-mean()-Y | mean of the body acceleration "jerk" in the Y direction
+tBodyAccJerk.mean...Z| tBodyAccJerk-mean()-Z | mean of the body acceleration "jerk" in the Z direction
+tBodyAccJerk.std...X| tBodyAccJerk-std()-X | mean of the standard deviation of the body acceleration "jerk" in the X direction
+tBodyAccJerk.std...Y| tBodyAccJerk-std()-Y | mean of the standard deviation of the body acceleration "jerk" in the X direction
+tBodyAccJerk.std...Z| tBodyAccJerk-std()-Z | mean of the standard deviation of the body acceleration "jerk" in the X direction
 tBodyGyro.mean...X| tBodyGyro-mean()-X |
 tBodyGyro.mean...Y| tBodyGyro-mean()-Y |
 tBodyGyro.mean...Z| tBodyGyro-mean()-Z |
