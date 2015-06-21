@@ -3,3 +3,5 @@
 .RData
 *.Rproj
 UCI HAR Dataset/
+testdata.txt
+dumpdata.R
