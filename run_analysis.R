@@ -108,6 +108,6 @@ analyze.motion.data <- function() {
 produce.tidy.dataset <- function() {
   data <- analyze.motion.data()
   tidy.dataset = aggregate(data[,-c(1,2)], list(Activity=data$Activity, Subject=data$Subject), mean)
-  write.table(tidy.dataset, "tidy-inertial-data-means.txt")
+  write.table(tidy.dataset, "tidy-inertial-data-means.txt", row.name=FALSE)
 }
 
