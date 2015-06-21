@@ -7,7 +7,7 @@ DATA.ROOT.DIRECTORY = "UCI HAR Dataset"
 # just the names
 load.activity.names <- function() {
   activity.names.filename <- file.path(DATA.ROOT.DIRECTORY, "activity_labels.txt")
-  activity.names <- read.table(activity.names.filename, sep=" ", stringsAsFactors = FALSE)
+  activity.names <- read.table(activity.names.filename, stringsAsFactors = FALSE)
   activity.names[,2]
 }
 
@@ -28,9 +28,9 @@ load.measurement.data <- function (data.type,...) {
 #
 # data.type is the "type" of the data, either "test" or "training"
 # Returns a vector of integers
-load.activity.records <- function(data.type) {
+load.activity.records <- function(data.type, ...) {
   activity.indices.filename = file.path(DATA.ROOT.DIRECTORY, data.type, paste0("y_", data.type, ".txt"))
-  activity.indices <- read.table(activity.indices.filename, sep=" ", stringsAsFactors = FALSE)
+  activity.indices <- read.table(activity.indices.filename, sep=" ", stringsAsFactors = FALSE, ...)
   activity.indices[,1]
 }
 
@@ -42,11 +42,20 @@ load.subject.numbers <- function(data.type, ...) {
 
 load.combined.values <- function(loader.func, ...) {
   first.data.set <- loader.func("train", ...)
-  print(c("first data", dim(first.data.set)))
   second.data.set <- loader.func("test", ...)
   combining.func <- if (is.null(dim(first.data.set))) append else rbind
   
   combining.func(first.data.set, second.data.set)
+}
+
+select.means.and.standard.deviations <- function(observation.data) {
+  observation.data[,grep("-(mean|std)", load.data.column.names())]
+}
+
+add.activity.names <- function(observation.data) {
+  activity.names <- load.activity.names()
+  activity.records <- load.combined.values(load.activity.records)
+  cbind("Activity" = activity.names[activity.records], observation.data)
 }
 
 #print(class(load.activity.names()))
@@ -55,4 +64,9 @@ load.combined.values <- function(loader.func, ...) {
 #print(class(data))
 #print(load.activity.records("test"))
 #print(load.subject.numbers("test"))
-print(load.combined.values(load.measurement.data, nrow=3))
+#data <- load.combined.values(load.measurement.data)
+#print(load.combined.values(load.measurement.data, nrow=3))
+
+#reduced <- select.means.and.standard.deviations(data)
+
+print(head(add.activity.names(reduced), 100)$Activity)
